@@ -75,8 +75,19 @@ if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
     source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
 fi
 
-export HOMEBREW_GITHUB_API_TOKEN="6f3967beea0935eb4560917e154e9eb10d31fd0c"
+export HOMEBREW_GITHUB_API_TOKEN= {{ insert your github token here }}
 
 # add path for exercism
 export EXERCISM_PATH=/Users/hkhanhex/projects/exercism-mac
 export PATH=$EXERCISM_PATH:$PATH
+
+# Setup jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+
+# Setup pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+
